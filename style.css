@@ -139,3 +139,139 @@ padding:0 15px 15px;
 margin:0;
 color:#555;
 }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+
+.service-grid,
+.why-grid,
+.industry-grid,
+.gallery-grid {
+  display: grid;
+  gap: 25px;
+}
+
+.service-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.service-card {
+  background: white;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.service-card img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+}
+
+.service-card h3 {
+  margin: 0;
+  padding: 15px 15px 8px;
+  color: #0b2e4d;
+}
+
+.service-card p {
+  margin: 0;
+  padding: 0 15px 18px;
+  color: #555;
+}
+
+.why-grid,
+.industry-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.why-card,
+.industry-card {
+  background: white;
+  border: 1px solid #dbe3ee;
+  border-radius: 16px;
+  padding: 22px;
+  font-weight: 700;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.06);
+}
+
+.gallery-grid {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  border-radius: 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.quote-section {
+  background: linear-gradient(135deg, #0f3d66, #0b2e4d);
+  color: white;
+}
+
+.quote-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.quote-box h2,
+.quote-box p {
+  color: white;
+  margin-top: 0;
+}
+
+.quote-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.quote-section .btn {
+  background: white;
+  color: #0f3d66;
+}
+
+.quote-section .btn.primary {
+  background: #ff8a00;
+  color: white;
+  border-color: #ff8a00;
+}
+
+@media (max-width: 900px) {
+  .hero-grid,
+  .service-grid,
+  .why-grid,
+  .industry-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .hero-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .service-grid,
+  .why-grid,
+  .industry-grid,
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+}
